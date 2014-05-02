@@ -2,11 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>visualstudio2013-update2</id>
-    <version>1.0.1-rc</version>
+    <version>1.0.2-rc</version>
     <title>Visual Studio 2013 Update 2</title>
     <authors>Microsoft</authors>
     <owners>Bryan Matthews</owners>
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=42307</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/VisualStudio2013.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Visual Studio 2013 Update 2 RC</description>
 	<dependencies>
