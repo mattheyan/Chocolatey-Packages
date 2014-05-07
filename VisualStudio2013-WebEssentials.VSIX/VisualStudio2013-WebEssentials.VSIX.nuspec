@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>visualstudio2013-webessentials.vsix</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>Web Essentials 2013</title>
     <authors>Mads Kristensen</authors>
     <owners>Bryan Matthews</owners>
@@ -19,6 +19,6 @@ This is for all Web developers using Visual Studio 2013.
     <summary>WebEssentials2013</summary>
     <releaseNotes>http://vswebessentials.com/changelog</releaseNotes>
     <copyright>Microsoft Reciprocal License (Ms-RL)</copyright>
-    <tags>Javascript HTML CSS markdown less CoffeeScript ZenCoding TypeScript SASS</tags>
+    <tags>Visual Studio Web Essentials 2013 Javascript HTML CSS markdown less CoffeeScript ZenCoding TypeScript SASS</tags>
   </metadata>
 </package>
