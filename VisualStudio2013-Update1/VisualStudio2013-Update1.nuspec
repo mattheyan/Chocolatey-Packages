@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>visualstudio2013-update1</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Visual Studio 2013 Update 1</title>
     <authors>Microsoft</authors>
     <owners>Bryan Matthews</owners>
@@ -10,6 +10,6 @@
 	<iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/VisualStudio2013.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Visual Studio 2013 Update 1</description>
-	<tags>Microsoft Visual Studio 2013 VS VS2013 VSUpdate IDE ALM</tags>
+	<tags>Microsoft Visual Studio 2013 update 1 VS VS2013 VSUpdate IDE ALM</tags>
   </metadata>
 </package>
