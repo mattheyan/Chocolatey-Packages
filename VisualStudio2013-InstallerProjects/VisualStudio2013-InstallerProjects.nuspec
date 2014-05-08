@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>visualstudio2013-installerprojects</id>
-    <version>1.0.0-pre</version>
-    <title>Visual Studio Installer Projects</title>
+    <version>1.0.1-pre</version>
+    <title>Visual Studio 2013 Installer Projects</title>
     <authors>Microsoft</authors>
     <owners>Bryan Matthews</owners>
     <projectUrl>http://visualstudiogallery.msdn.microsoft.com/9abe329c-9bba-44a1-be59-0fbf6151054d</projectUrl>
