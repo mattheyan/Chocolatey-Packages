@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualstudio2012-modelingsdk</id>
+    <version>1.0.0</version>
+    <title>Visual Studio 2012 Modeling SDK</title>
+    <authors>Microsoft</authors>
+    <owners>Bryan Matthews</owners>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=30680</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/VisualStudio2012.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Domain Specific Languages (DSL Tools) and Architecture Tools SDK for Microsoft Visual Studio 2012. This SDK provides tools and templates for building Domain Specific Language designers, extending UML and Layer designers and the build tasks for code indexing. You can build your own graphical or form-based designers for Visual Studio 2012 and extend existing tools.
+</description>
+	<!--<dependencies>
+        <dependency id="visualstudio2012-sdk" />
+    </dependencies>-->
+	<tags>Microsoft Visual Studio 2012 Modeling SDK DSL UML VS VS2012 IDE ALM</tags>
+  </metadata>
+</package>

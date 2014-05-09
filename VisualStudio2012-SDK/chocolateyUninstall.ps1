@@ -1,7 +1,7 @@
 try {
-	$packageName = 'visualstudio2013-modelingsdk'
-	$exeFileName = 'VS_VmSdk.exe'
-	$productVersion = '12.0'
+	$packageName = 'visualstudio2012-sdk'
+	$exeFileName = 'vssdk_full.exe'
+	$productVersion = '11.0'
 
 	$installer = ls (Join-Path $env:ProgramData "Package Cache") -Recurse -Filter $exeFileName | ? { $_.VersionInfo.ProductVersion.StartsWith($productVersion) }
 	if (!$installer) {

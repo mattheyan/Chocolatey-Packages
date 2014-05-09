@@ -1,9 +1,8 @@
 try {
-	$packageName = 'visualstudio2013-sdk'
-	$downloadUrl = 'http://download.microsoft.com/download/9/1/0/910EE61D-A231-4DAB-BD56-DCE7092687D5/vssdk_full.exe'
-	$exeFileName = 'vssdk_full.exe'
+	$packageName = 'visualstudio2012-sdk'
+	$downloadUrl = 'http://download.microsoft.com/download/8/3/8/8387A8E1-E422-4DD5-B586-F1F2EC778817/vssdk_full.exe'
 
-	$logFilePath = Join-Path $env:TEMP ($exeFileName + '.log')
+	$logFilePath = Join-Path $env:TEMP 'vssdk_full.log'
 	$installArgs = '/Passive /NoRestart /Log ' + $logFilePath
 	Install-ChocolateyPackage $packageName 'exe' $installArgs $downloadUrl -validExitCodes @(0,3010)
 

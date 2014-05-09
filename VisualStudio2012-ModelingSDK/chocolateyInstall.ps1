@@ -1,7 +1,7 @@
 try {
-	$packageName = 'visualstudio2013-sdk'
-	$downloadUrl = 'http://download.microsoft.com/download/9/1/0/910EE61D-A231-4DAB-BD56-DCE7092687D5/vssdk_full.exe'
-	$exeFileName = 'vssdk_full.exe'
+	$packageName = 'visualstudio2012-modelingsdk'
+	$downloadUrl = 'http://download.microsoft.com/download/6/5/C/65C5ECEF-FD1E-407E-9613-558EF0EEBAA2/VS_VmSdk.exe'
+	$exeFileName = 'VS_VmSdk.exe'
 
 	$logFilePath = Join-Path $env:TEMP ($exeFileName + '.log')
 	$installArgs = '/Passive /NoRestart /Log ' + $logFilePath
