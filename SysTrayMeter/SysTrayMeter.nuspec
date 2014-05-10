@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>systraymeter</id>
+    <title>System Tray Meter</title>
+    <version>0.2.0.6</version>
+    <authors>jacky</authors>
+    <owners>Bryan Matthews</owners>
+    <summary>SysTrayMeter is a system tray application that displays your CPU and RAM usage in one space-saving system tray icon.</summary>
+    <description>
+SysTrayMeter will display an icon in the system tray that shows both CPU and RAM usage. It is designed to have both metrics visible simultaneously in an extremely efficient visual representation.
+
+http://lifehacker.com/277249/get-system-statistics-at-a-glance-with-systraymeter
+http://www.freewaregenius.com/systraymeter/
+http://download.cnet.com/SysTrayMeter/3000-2206_4-10768997.html
+</description>
+    <projectUrl>http://download.cnet.com/SysTrayMeter/3000-2206_4-10768997.html</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/SysTrayMeter.png</iconUrl>
+    <tags>admin windows performance memory RAM CPU system tray</tags>
+    <copyright>Copyright (c) 2007; jacky</copyright>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
