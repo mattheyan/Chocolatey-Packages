@@ -1,6 +1,6 @@
 ﻿try {
 	$packageName = 'visualstudio2013-update2'
-	$downloadUrl = 'http://download.microsoft.com/download/F/D/9/FD9F1814-575D-4AA1-8B8D-DA82493E64BE/VSU2/VS2013.2%20RC.exe'
+	$downloadUrl = 'http://download.microsoft.com/download/6/7/8/6783FB22-F77D-45C5-B989-090ED3E49C7C/VS2013.2.exe'
 
 	# NOTE: Borrowed from BoxStarter.Azure
 	if (${env:ProgramFiles(x86)} -ne $null) {
@@ -22,9 +22,9 @@
 		}
 		elseif ($currentVersion -eq $update1Version) {
 			Write-Host "Installing Visual Studio 2013 update 2..."
-			$logFilePath = Join-Path $env:TEMP 'VS2013.2-RC.log'
+			$logFilePath = Join-Path $env:TEMP 'VS2013.2.log'
 			$installArgs = '/Passive /NoRestart /Log ' + $logFilePath
-			Install-ChocolateyPackage 'VS2013.2-RC.exe' 'exe' $installArgs $downloadUrl -validExitCodes @(0,3010)
+			Install-ChocolateyPackage 'VS2013.2.exe' 'exe' $installArgs $downloadUrl -validExitCodes @(0,3010)
 		}
 		elseif ($currentVersion -eq $update2Version) {
 			Write-Host "Visual Studio 2013 Update 2 is already installed."

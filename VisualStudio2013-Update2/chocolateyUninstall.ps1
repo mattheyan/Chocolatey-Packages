@@ -24,9 +24,9 @@
 		}
 		elseif ($currentVersion -eq $update2Version) {
 			Write-Host "Removing Visual Studio 2013 update 2..."
-			$installer = ls (Join-Path $env:ProgramData "Package Cache") -Recurse -Filter 'VS2013.2 RC.exe'
+			$installer = ls (Join-Path $env:ProgramData "Package Cache") -Recurse -Filter 'VS2013.2.exe'
 			$uninstallArgs = '/Uninstall /Force /Passive /NoRestart'
-			Uninstall-ChocolateyPackage '"VS2013.2 RC.exe"' 'exe' $uninstallArgs $installer.FullName -validExitCodes @(0,3010)
+			Uninstall-ChocolateyPackage '"VS2013.2.exe"' 'exe' $uninstallArgs $installer.FullName -validExitCodes @(0,3010)
 		}
 		else {
 			throw "Unexpected Visual Studio 2013 Update version '$($currentVersion)'!"
