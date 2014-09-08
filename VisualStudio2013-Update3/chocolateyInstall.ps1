@@ -18,7 +18,7 @@
 		$update2VersionA = '12.0.30324'
 		$update2VersionB = '12.0.30501'
 		$update3Version = '12.0.30723'
-		$currentVersion = (get-itemproperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\12.0\premium\1033' 'UpdateVersion').UpdateVersion
+		$currentVersion = (get-itemproperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\12.0\devenv\1033' 'UpdateVersion').UpdateVersion
 		if ($currentVersion -eq $baseVersion -or $currentVersion -eq $update1Version -or $currentVersion -eq $update2VersionA -or $currentVersion -eq $update2VersionB) {
 			Write-Host "Installing Visual Studio 2013 update 3..."
 			$logFilePath = Join-Path $env:TEMP 'VS2013.3.log'
