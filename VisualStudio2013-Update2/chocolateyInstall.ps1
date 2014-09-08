@@ -16,7 +16,7 @@
 		$baseVersion = '12.0.21005'
 		$update1Version = '12.0.30110'
 		$update2Version = '12.0.30324'
-		$currentVersion = (get-itemproperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\12.0\premium\1033' 'UpdateVersion').UpdateVersion
+		$currentVersion = (get-itemproperty 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\DevDiv\vs\Servicing\12.0\devenv\1033' 'UpdateVersion').UpdateVersion
 		if ($currentVersion -eq $baseVersion) {
 			throw "Visual Studio updates are cumulative and update 1 is not yet installed..."
 		}
