@@ -21,7 +21,6 @@ try {
 
 	# Remove file type registration
 	Write-Host "Removing file type registration..."
-	$balsamiqExe = Join-Path $installPath "Balsamiq Mockups.exe"
 	$elevatedRemoveFileAssociation = "`
     if( -not (Test-Path -path HKCR:) ) {New-PSDrive -Name HKCR -PSProvider registry -Root Hkey_Classes_Root};`
     if(test-path -LiteralPath 'HKCR:\.bmml') { remove-item -Path 'HKCR:\.bmml' -Recurse };`
