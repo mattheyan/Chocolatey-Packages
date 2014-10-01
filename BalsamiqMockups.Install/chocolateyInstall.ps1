@@ -48,13 +48,7 @@ try {
 
 	# Create desktop shortcut
 	$wshShell = New-Object -COMObject WScript.Shell
-	$currentUser = (Get-WMIObject -class Win32_ComputerSystem | select username).username
-	if ($currentUser -match "\\") {
-		$currentUser = $currentUser.Substring($currentUser.IndexOf("\") + 1)
-	}
-	$usersDir = Split-Path $env:USERPROFILE -Parent
-	$currentUserDir = Join-Path $usersDir $currentUser
-	$currentUserDesktopDir = Join-Path $currentUserDir "Desktop"
+	$currentUserDesktopDir = Join-Path $env:HOME "Desktop"
 	$desktopLinkPath = Join-Path $currentUserDesktopDir "Balsamiq Mockups.lnk"
 	if (!(Test-Path $desktopLinkPath)) {
 		Write-Host "Creating Desktop shortcut..."
