@@ -21,9 +21,9 @@ try {
 	Write-Host "Moving application files..."
 	$sourcePath = Join-Path $tempDir 'MockupsForDesktop'	
 	$elevatedMoveFiles = "`
-	Move-Item '$sourcePath' '$installPath';`
+	robocopy '$sourcePath' '$installPath' /MIR
 	return 0;"
-	Start-ChocolateyProcessAsAdmin $elevatedMoveFiles
+	Start-ChocolateyProcessAsAdmin $elevatedMoveFiles -validExitCodes @(0, 1, 2, 3) #robocopy uses non-standard exit codes
 
 	# Add file type registration
 	Write-Host "Adding file type registration..."
@@ -47,15 +47,7 @@ try {
 	Start-ChocolateyProcessAsAdmin $elevatedSetFileAssociation
 
 	# Create desktop shortcut
-	$wshShell = New-Object -COMObject WScript.Shell
-	$currentUserDesktopDir = Join-Path $env:HOME "Desktop"
-	$desktopLinkPath = Join-Path $currentUserDesktopDir "Balsamiq Mockups.lnk"
-	if (!(Test-Path $desktopLinkPath)) {
-		Write-Host "Creating Desktop shortcut..."
-		$desktopShortcut = $wshShell.CreateShortcut($desktopLinkPath)
-		$desktopShortcut.TargetPath = $balsamiqExe
-		$desktopShortcut.Save()
-	}
+	Install-ChocolateyDesktopLink $balsamiqExe
 
 	Write-ChocolateySuccess "balsamiqmockups.install"
 } catch {
