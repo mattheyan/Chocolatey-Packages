@@ -10,11 +10,13 @@
     <description>
 Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.
 
+Because Balsamiq is commercial software, this package will install Balsamiq as a fully-functional trial. If you have a license key you can activate the software after install.
+
 For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups.install, or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.
 </description>
     <projectUrl>http://balsamiq.com/products/mockups/</projectUrl>
 	<iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/BalsamiqMockups.png</iconUrl>
-    <tags>balsamiq mockups prototypes prototyping</tags>
+    <tags>balsamiq mockups prototypes prototyping trial</tags>
     <copyright>2014 Balsamiq Studios, LLC</copyright>
     <licenseUrl>http://support.balsamiq.com/customer/portal/articles/127432</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
