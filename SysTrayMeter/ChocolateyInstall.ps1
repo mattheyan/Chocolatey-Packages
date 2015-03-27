@@ -1,8 +1,7 @@
 try {
 	$packageName = 'systraymeter'
-	#$zipDownloadUrl = 'http://freewaregenius.com/wp-content/downloads/SysTrayMeter.zip'
-	$zipDownloadUrl = 'http://software-files-a.cnet.com/s/software/10/76/89/96/SysTrayMeter.zip?lop=link&ptype=3001&ontid=2206&siteId=4&edId=3&spi=3a09c42872a00fbc85ba5963a881ac20&pid=10768996&psid=10768997&token=1399768782_49d9b9d48e3996c3320fe03c98b1852e&fileName=SysTrayMeter.zip'
-
+	$zipDownloadUrl = 'http://freewaregenius.com/wp-content/downloads/SysTrayMeter.zip'
+	
 	# Create variable for program files directory
 	# ===========================================
 	# Borrowed from BoxStarter.Azure
