@@ -3,7 +3,7 @@
   <metadata>
     <id>balsamiqmockups.install</id>
     <title>Balsamiq Mockups for Desktop</title>
-    <version>1.0.8</version>
+    <version>2.2.24</version>
     <authors>Balsamiq Studios</authors>
     <owners>Bryan Matthews</owners>
     <summary>Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.</summary>
@@ -11,6 +11,8 @@
 Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.
 
 Because Balsamiq is commercial software, this package will install Balsamiq as a fully-functional trial. If you have a license key you can activate the software after install.
+
+Version 1.* of this package (really v2 of the product) will no longer work due to the download file being moved. This package version (2.2.24) exists to allow for installing the last release of v2.
 
 For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups.install, or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.
 </description>

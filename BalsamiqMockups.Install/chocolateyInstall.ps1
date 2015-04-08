@@ -13,7 +13,7 @@ try {
 
 	# Download and extract ZIP file
 	$tempDir = [System.IO.Path]::GetTempFileName().Replace(".", "")
-	$zipUrl = "https://s3.amazonaws.com/build_production/mockups-desktop/MockupsForDesktop.zip?nocache=53174"
+    $zipUrl = 'https://build_archives.s3.amazonaws.com/mockups-desktop/2.2.24/MockupsForDesktop2.2.24-2014.11.06.zip'
 	Write-Host "Downloading zip file..."
 	Install-ChocolateyZipPackage "balsamiqmockups" $zipUrl $tempDir
 
