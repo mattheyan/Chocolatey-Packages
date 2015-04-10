@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>balsamiqmockups.install</id>
+    <id>balsamiqmockups3</id>
     <title>Balsamiq Mockups for Desktop</title>
-    <version>2.2.24</version>
+    <version>3.0.1</version>
     <authors>Balsamiq Studios</authors>
     <owners>Bryan Matthews</owners>
     <summary>Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.</summary>
@@ -12,16 +12,22 @@ Balsamiq is a wireframing and mock up tool with a high focus on usability. Quick
 
 Because Balsamiq is commercial software, this package will install Balsamiq as a fully-functional trial. If you have a license key you can activate the software after install.
 
-Version 1.* of this package (really v2 of the product) will no longer work due to the download file being moved. This package version (2.2.24) exists to allow for installing the last release of v2.
+This package is specific to version 3 of Balsamiq Mockups for Desktop. If you need version 2, check out the [version 2 package](https://chocolatey.org/packages/balsamiqmockups.install).
 
-For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups.install, or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.
+For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups3 or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.
 </description>
     <projectUrl>http://balsamiq.com/products/mockups/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/BalsamiqMockups.png</iconUrl>
     <tags>balsamiq mockups prototypes prototyping trial</tags>
-    <copyright>2014 Balsamiq Studios, LLC</copyright>
+    <copyright>2015 Balsamiq Studios, LLC</copyright>
     <licenseUrl>http://support.balsamiq.com/customer/portal/articles/127432</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+# [3.0.1] - 2015-03-10
+
+## First release of major version 3
+
+[Announcement](http://blogs.balsamiq.com/product/2015/03/10/b3/)
+    </releaseNotes>
   </metadata>
 </package>
