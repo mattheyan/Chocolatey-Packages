@@ -8,6 +8,8 @@
     <owners>Bryan Matthews</owners>
     <summary>Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.</summary>
     <description>
+# For the latest version of Balsamiq, check out [Balsamiq Mockups 3](https://chocolatey.org/packages/balsamiqmockups3).
+
 Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.
 
 Because Balsamiq is commercial software, this package will install Balsamiq as a fully-functional trial. If you have a license key you can activate the software after install.

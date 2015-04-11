@@ -10,7 +10,7 @@ try {
 	$usersDir = Split-Path $env:USERPROFILE -Parent
 	$currentUserDir = Join-Path $usersDir $currentUser
 	$currentUserDesktopDir = Join-Path $currentUserDir "Desktop"
-	$desktopLinkPath = Join-Path $currentUserDesktopDir "Balsamiq Mockups.lnk"
+	$desktopLinkPath = Join-Path $currentUserDesktopDir "Balsamiq Mockups.exe.lnk"
 	if (Test-Path $desktopLinkPath) {
 		Write-Host "Deleting Desktop shortcut..."
 		$elevatedRemoveShortcut = "`
