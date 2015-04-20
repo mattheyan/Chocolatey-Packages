@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ChocolateyShell</id>
+    <title>Chocolatey PowerShell Shortcut</title>
+    <version>2.0.0</version>
+    <authors>Bryan Matthews</authors>
+    <owners>Bryan Matthews</owners>
+    <summary>Chocolatey PowerShell Shortcut</summary>
+    <description>A Chocolatey PowerShell shortcut that runs with elevated permissions.</description>
+    <projectUrl>http://chocolatey.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey/master/docs/logo/chocolateyicon.gif</iconUrl>
+    <tags>chocolatey</tags>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
