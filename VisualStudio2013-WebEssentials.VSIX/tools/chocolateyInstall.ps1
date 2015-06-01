@@ -1,2 +1,0 @@
-# http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361
-Install-ChocolateyVsixPackage 'visualstudio2013-webessentials.vsix' http://visualstudiogallery.msdn.microsoft.com/56633663-6799-41d7-9df7-0f2a504ca361/file/105627/32/WebEssentials2013.vsix 12
