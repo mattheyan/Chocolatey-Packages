@@ -1,6 +1,7 @@
 try {
 	$libDir = Split-Path $MyInvocation.MyCommand.Path -Parent
 
+	$cmdPath = (Get-Command 'cmd.exe').Path
 	$powershellPath = (Get-Command 'powershell.exe').Path
 
 	# Taken from Chocolatey:Install-ChocolateyDesktopLink
@@ -10,8 +11,8 @@ try {
 
 	$wshshell = New-Object -ComObject WScript.Shell
 	$lnk = $wshshell.CreateShortcut($inputTempFile)
-	$lnk.TargetPath = $powershellPath
-    $lnk.Arguments = " -NoExit -Command `"cd ~\\`""
+	$lnk.TargetPath = $cmdPath
+    $lnk.Arguments = "/K `"$powershellPath -NoExit -Command `"`"cd ~\\`"`"`""
 	$lnk.IconLocation = Join-Path $libDir 'chocolatey.ico'
 	$lnk.WorkingDirectory = ""
 	$lnk.Save()
