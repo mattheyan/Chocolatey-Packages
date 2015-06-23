@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FileNesting.VSIX</id>
+    <title>File Nesting Extension for Visual Studio</title>
+    <version>1.0.0</version>
+    <authors>Bryan Matthews</authors>
+    <owners>Bryan Matthews</owners>
+    <summary>Automatically nest files based on file name and enables developers to nest and unnest any file manually</summary>
+    <description>Automatically nest files based on file name and enables developers to nest and unnest any file manually.</description>
+    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/3ebde8fb-26d8-4374-a0eb-1e4e2665070c</projectUrl>
+    <iconUrl>https://visualstudiogallery.msdn.microsoft.com/3ebde8fb-26d8-4374-a0eb-1e4e2665070c/showImage/123283</iconUrl>
+    <tags>VS visualstudio vsix extension file nesting</tags>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

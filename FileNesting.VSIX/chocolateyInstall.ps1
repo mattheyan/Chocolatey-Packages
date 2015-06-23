@@ -1,0 +1,1 @@
+Install-ChocolateyVsixPackage -packageName 'FileNesting.VSIX' -vsixUrl 'https://visualstudiogallery.msdn.microsoft.com/3ebde8fb-26d8-4374-a0eb-1e4e2665070c/file/123284/15/File%20Nesting%20v2.1.20.vsix'
