@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VsVim.VSIX</id>
+    <title>VIM emulation layer for Visual Studio</title>
+    <version>1.0.0</version>
+    <authors>Bryan Matthews</authors>
+    <owners>Bryan Matthews</owners>
+    <summary>VIM emulation layer for Visual Studio</summary>
+    <description>This is a Vim Emulation layer for Visual Studio 2010 and above.  It integrates the familiar key binding experience of Vim directly into Visual Studio's editor.  </description>
+    <projectUrl>https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329/</projectUrl>
+    <iconUrl>https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329/showImage/6395</iconUrl>
+    <tags>VS visualstudio vsix extension vim</tags>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

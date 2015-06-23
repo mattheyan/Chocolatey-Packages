@@ -1,0 +1,1 @@
+Install-ChocolateyVsixPackage -packageName 'VsVim.VSIX' -vsixUrl 'https://visualstudiogallery.msdn.microsoft.com/59ca71b3-a4a3-46ca-8fe1-0e90e3f79329/file/6390/55/VsVim.vsix'
