@@ -1,0 +1,6 @@
+Update to RTM of VisualStudio2013-InstallerProjects
+Add welcome message (with dismissal) to ChocolateyShell
+ChocolateyShell can add/import the ChocolateyWrapper module
+Update package metadata for SysTrayMeter
+Build and upload updated BalsamiqMockups3 packages
+Discard the Desktops package
