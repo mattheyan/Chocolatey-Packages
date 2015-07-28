@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualstudio2013-installerprojects</id>
+    <version>1.0.1-pre</version>
+    <title>Visual Studio 2013 Installer Projects</title>
+    <authors>Microsoft</authors>
+    <owners>Bryan Matthews</owners>
+    <projectUrl>http://visualstudiogallery.msdn.microsoft.com/9abe329c-9bba-44a1-be59-0fbf6151054d</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/mattheyan/Chocolatey-Packages/master/Icons/VisualStudio2013.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+This extension provides the same functionality that currently exists in Visual Studio 2010 for Visual Studio Installer projects.
+</description>
+	<tags>Microsoft Visual Studio 2013 Installer Project Projects VS VS2013 IDE ALM</tags>
+  </metadata>
+</package>
