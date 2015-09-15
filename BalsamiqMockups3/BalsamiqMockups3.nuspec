@@ -16,6 +16,15 @@ Because Balsamiq is commercial software, this package will install Balsamiq as a
 
 This package is specific to version 3 of Balsamiq Mockups for Desktop. If you need version 2, check out the [version 2 package](https://chocolatey.org/packages/balsamiqmockups.install).
 
+This package supports registration during install. Just pass the following parameters:
+
+* License code: `/licenseCode:"&lt;your license code>"`
+* Name of the license holder: `/licenseName:"&lt;your name>"`
+
+Example:
+
+`-params '/licenseCode:""abcd1234=="" /licenseName:""John Doe""'`
+
 For questions about this package, please leave a comment on the package page at https://chocolatey.org/packages/balsamiqmockups3 or create an issue on Github at https://github.com/mattheyan/Chocolatey-Packages/issues.</description>
     <summary>Balsamiq is a wireframing and mock up tool with a high focus on usability. Quickly come up with mock ups and easily share them with your clients.</summary>
     <releaseNotes></releaseNotes>

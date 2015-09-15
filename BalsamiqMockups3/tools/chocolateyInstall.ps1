@@ -1,3 +1,6 @@
+$toolsPath = (Split-Path -parent $MyInvocation.MyCommand.Definition)
+. "$toolsPath\extensions.ps1"
+
 $packageName = '{{PackageName}}'
 
 # Create variable for program files directory
@@ -8,6 +11,8 @@ if(${env:ProgramFiles(x86)} -ne $null) {
 } else {
     $programFiles86 = $env:ProgramFiles
 }
+
+$arguments = (ParseParameters $env:chocolateyPackageParameters)
 
 # Instructions for silent installation: http://support.balsamiq.com/customer/portal/articles/133390
 $installPath = Join-Path $programFiles86 "Balsamiq Mockups 3"
@@ -27,6 +32,14 @@ return 0;"
 Start-ChocolateyProcessAsAdmin $elevatedMoveFiles -validExitCodes @(0, 1, 2, 3) #robocopy uses non-standard exit codes
 
 $balsamiqExe = Join-Path $installPath "Balsamiq Mockups 3.exe"
+
+if($arguments.ContainsKey("licenseCode") -and $arguments.ContainsKey("licenseName")) {
+
+    $licenseCode = $arguments["licenseCode"]
+    $licenseName = $arguments["licenseName"]
+
+    Start-Process $balsamiqExe -ArgumentList "register ""$licenseName"" ""$licenseCode"""
+}
 
 # Add file type registration
 <#
