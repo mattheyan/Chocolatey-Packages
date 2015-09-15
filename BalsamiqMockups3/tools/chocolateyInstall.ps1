@@ -63,5 +63,8 @@ return 0;"
 Start-ChocolateyProcessAsAdmin $elevatedSetFileAssociation
 #>
 
-# Create desktop shortcut
-Install-ChocolateyDesktopLink $balsamiqExe
+$shortcutPath = [environment]::GetFolderPath([environment+specialfolder]::Programs)
+$shortcutFilePath = Join-Path $shortcutPath "Balsamiq Mockups 3.lnk"
+
+# Create shortcut in Startmenu
+Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $balsamiqExe
