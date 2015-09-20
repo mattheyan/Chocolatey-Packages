@@ -1,6 +1,8 @@
 $toolsPath = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 . "$toolsPath\extensions.ps1"
 
+$applicationPath = (Join-Path (Split-Path -parent $toolsPath) "application")
+$file = (Get-ChildItem -Path $applicationPath -Filter *.zip | Select-Object -First 1).FullName
 $packageName = '{{PackageName}}'
 
 # Create variable for program files directory
@@ -18,18 +20,9 @@ $arguments = (ParseParameters $env:chocolateyPackageParameters)
 $installPath = Join-Path $programFiles86 "Balsamiq Mockups 3"
 
 # Download and extract ZIP file
-$tempDir = [System.IO.Path]::GetTempFileName().Replace(".", "")
-$zipUrl = '{{downloadUrl}}'
-Write-Host "Downloading zip file..."
-Install-ChocolateyZipPackage $packageName $zipUrl $tempDir
-
-# Move child folder into target folder
+Get-ChocolateyUnzip -fileFullPath $file -destination "$programFiles86"
 Write-Host "Moving application files..."
-$sourcePath = Join-Path $tempDir 'Balsamiq_Mockups_3'
-$elevatedMoveFiles = "`
-robocopy '$sourcePath' '$installPath' /MIR
-return 0;"
-Start-ChocolateyProcessAsAdmin $elevatedMoveFiles -validExitCodes @(0, 1, 2, 3) #robocopy uses non-standard exit codes
+Rename-Item (Join-Path $programFiles86 'Balsamiq_Mockups_3') $installPath
 
 $balsamiqExe = Join-Path $installPath "Balsamiq Mockups 3.exe"
 

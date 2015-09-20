@@ -33,5 +33,6 @@ For questions about this package, please leave a comment on the package page at 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="{{PackageFilePath}}" target="application" />
   </files>
 </package>
