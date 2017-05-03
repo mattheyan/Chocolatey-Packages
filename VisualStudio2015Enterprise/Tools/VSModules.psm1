@@ -130,7 +130,7 @@ It's recommended you call it the same as your nuget package id.
 This is the url to download the VS web installer.
 
 .EXAMPLE
-Install-VS 'VisualStudio2015Enterprise' 'http://download.microsoft.com/download/zzz/vs_enterprise.exe'
+Install-VS '[PackageName]' 'http://download.microsoft.com/download/zzz/vs_enterprise.exe'
 
 .OUTPUTS
 None
@@ -144,7 +144,9 @@ Install-ChocolateyPackage
 #>
 param(
   [string] $packageName,
-  [string] $url
+  [string] $url,
+  [string] $exeName,
+  [string] $checksum
 )
     Write-Debug "Running 'Install-VS' for $packageName with url:`'$url`'";
 
@@ -152,10 +154,7 @@ param(
     $validExitCodes = @(
         0, # success
         3010, # success, restart required
-        2147781575, # pending restart required
-        -2147185721, # pending restart required
-        -2147205120, # pending restart not required
-        -2147172352 # pending restart required
+        2147781575 # pending restart required
     )
 
     $defaultAdminFile = (Join-Path $PSScriptRoot 'AdminDeployment.xml')
@@ -170,9 +169,62 @@ param(
     Update-Admin-File $packageParameters $adminFile
 
     $silentArgs = Generate-Install-Arguments-String $packageParameters $adminFile
+    
+    DetermineSetupPath
+	
+    if (Test-Path env:\visualStudio:setupFolder)
+    {
+        Write-Output "Installing Visual Studio from $env:visualStudio:setupFolder"
+        Install-ChocolateyInstallPackage `
+          -PackageName $packageName `
+          -FileType 'exe' `
+          -SilentArgs $silentArgs `
+          -File "$env:visualStudio:setupFolder\$exeName" `
+          -ValidExitCodes $validExitCodes `
+           -Checksum $checksum `
+           -ChecksumType 'sha256'
+    }
+    else
+    {
+        Write-Output "Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes"
+        Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes -Checksum $checksum -ChecksumType sha256
+    }
 
-    Write-Output "Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes"
-    Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
+    TeardownIso
+
+}
+
+<#
+Checks for user specified local path and mounts iso if necessary
+#>
+function DetermineSetupPath(){
+
+    if (!(Test-Path env:\visualStudio:setupFolder)){
+
+        if (!(Test-Path env:\visualStudio:isoImage)) 
+        {
+	        Write-Host "Visual Studio will be installed from Web"
+            return
+        }
+        
+        $global:mustDismountIso = $true;
+        $mountedIso = Mount-DiskImage -PassThru "$env:visualStudio:isoImage"
+        $isoDrive = Get-Volume -DiskImage $mountedIso | Select -expand DriveLetter
+        Write-Host "Mounted ISO to $isoDrive"
+        $env:visualStudio:setupFolder = "$isoDrive`:\"
+    }
+}
+
+function TeardownIso(){
+    
+    if ($global:mustDismountIso){
+        Write-Host "Dismounting ISO"
+        Dismount-DiskImage -ImagePath $env:visualStudio:isoImage
+    }
+    else
+    {
+        Write-Host "No ISO to dismount"
+    }
 }
 
 function Uninstall-VS {
