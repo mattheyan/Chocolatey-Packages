@@ -38,7 +38,7 @@ task Choco:ListPackages {
 
         if ($chocoSource -eq "chocolatey.org") {
             $chocoPullSource = "https://chocolatey.org/api/v2/"
-            $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
+            $chocoPushSource = "https://push.chocolatey.org/"
         } elseif ($chocoSourceHost -eq 'myget') {
             $chocoPullSource = "https://www.myget.org/F/$chocoSource/auth/$chocoApiKey"
             $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
@@ -120,7 +120,7 @@ task Choco:BuildPackages {
 
         if ($chocoSource -eq "chocolatey.org") {
             $chocoPullSource = "https://chocolatey.org/api/v2/"
-            $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
+            $chocoPushSource = "https://push.chocolatey.org/"
         } elseif ($chocoSourceHost -eq 'myget') {
             $chocoPullSource = "https://www.myget.org/F/$chocoSource/auth/$chocoApiKey"
             $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
@@ -283,7 +283,7 @@ task Choco:DeployPackages {
 
         if ($chocoSource -eq "chocolatey.org") {
             $chocoPullSource = "https://chocolatey.org/api/v2/"
-            $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
+            $chocoPushSource = "https://push.chocolatey.org/"
         } elseif ($chocoSourceHost -eq 'myget') {
             $chocoPullSource = "https://www.myget.org/F/$chocoSource/auth/$chocoApiKey"
             $chocoPushSource = "https://www.myget.org/F/$chocoSource/api/v2/"
