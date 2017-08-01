@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <title>OneDrive</title>
-    <version>{{PackageVersion}}</version>
+    <id>OneDrive</id>
+    <title>OneDrive (Next Generation Sync Client)</title>
+    <version>17.3.6798.0207</version>
     <authors>Microsoft</authors>
-    <owners>tonigellida</owners>
-    <summary>
-	Delivers a satisfactory online file storage and sharing solution in a free and easy to use service.
-	</summary>
-    <description>
-	Delivers a satisfactory online file storage and sharing solution in a free and easy to use service.
-	</description>
-    <projectUrl>https://onedrive.live.com/about/</projectUrl>
-    <tags>notSilent notUninstallable backup webdav online-backup selective-sync</tags>
+    <owners>mattheyan</owners>
+    <description>The new OneDrive sync client lets you connect and sync files from your OneDrive for Business and from SharePoint sites. You can add a work or school account to the OneDrive sync client and sync all your files to your computer.</description>
+    <projectUrl>https://support.office.com/en-us/article/Get-started-with-the-new-OneDrive-sync-client-in-Windows-615391c4-2bd3-4aae-a42a-858262e42a49</projectUrl>
+    <tags>onedrive backup cloud sync</tags>
     <copyright></copyright>
-    <licenseUrl>http://windows.microsoft.com/en-US/windows-live/microsoft-service-agreement</licenseUrl>
+    <licenseUrl>https://products.office.com/en-us/onedrive-for-business/compare-onedrive-for-business-plans</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/mattheyan/Chocolatey-Packages/master/icons/OneDrive.png</iconUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
